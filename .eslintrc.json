@@ -1,3 +1,66 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project":"./tsconfig.json"
+  },
+  "settings": {
+    "tailwindcss": { 
+    "groupByResponsive":true
+  }
+  },
+  "plugins": [
+    "simple-import-sort",
+    "tailwindcss",
+    "testing-library"
+  ],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:tailwindcss/recommended",
+    "next/core-web-vitals",
+    "prettier"
+],
+"rules": {
+  "curly":"error",
+  "no-console":"warn",
+  "prefer-arrow-callback":"error",
+  "func-style":["error","expression"],
+  "prefer-const":"error",
+  "arrow-body-style":["error","always"],
+  "react/display-name":"error",
+  "react/jsx-handler-names":[
+    "error",
+    {
+      "eventHandlerPrefix":"handle",
+      "eventHandlerPropPrefix":"on"
+    }
+  ],
+  "import/newline-after-import":"error",
+  "simple-import-sort/imports": "error",
+  "simple-import-sort/exports": "error",
+  "@typescript-eslint/naming-convention": [
+    "error",
+    {
+      "selector": ["variable"],
+      "types": ["boolean"],
+      "format":["PascalCase"],
+      "prefix": ["no", "is", "should", "has", "can"]
+    }
+  ],
+  "@typescript-eslint/no-unused-vars": [
+    "error",
+    {
+      "varsIgnorePattern":"^_",
+      "argsIgnorePattern":"^_"
+    }
+  ],
+  "jsx-a11y/anchor-is-valid":[
+    "error",
+    {
+      "components":["Link"],
+      "specialLink":["hrefLest","hrefRight"],
+      "aspects":["invalidHref","preferButton"]
+    }
+  ]
+}
 }
