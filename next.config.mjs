@@ -2,6 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+  eslint: { dirs: ['src'] },
+  pageExtensions: ['page.tsx', 'page.jsx'],
+};
 
-module.exports = nextConfig
+export default nextConfig;
