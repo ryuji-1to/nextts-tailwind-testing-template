@@ -2,3 +2,4 @@ node_modules
 out
 .next
 .eslintrc.json
+*.config.js
