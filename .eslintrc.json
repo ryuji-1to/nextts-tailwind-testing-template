@@ -26,7 +26,6 @@
   "prefer-arrow-callback":"error",
   "func-style":["error","expression"],
   "prefer-const":"error",
-  "arrow-body-style":["error","always"],
   "react/display-name":"error",
   "react/jsx-handler-names":[
     "error",
